@@ -36,7 +36,6 @@
 .allocation-btn:hover:not(:disabled) {
   background: #0056b3;
   border-color: #0056b3;
-  transform: translateY(-1px);
 }
 
 .allocation-btn:disabled {
