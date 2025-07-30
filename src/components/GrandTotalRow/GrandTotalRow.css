@@ -15,14 +15,14 @@
   padding: 16px;
   font-weight: 600;
   color: #28a745;
-  text-align: right;
+  text-align: left;
 }
 
 .grand-total-row .input-cell,
 .grand-total-row .button-cell {
   font-size: 16px;
   padding: 16px;
-  text-align: center;
+  text-align: left;
   color: #6c757d;
 }
 
@@ -30,6 +30,6 @@
   font-size: 16px;
   padding: 16px;
   font-weight: 600;
-  text-align: right;
+  text-align: left;
   color: #6c757d;
 }
