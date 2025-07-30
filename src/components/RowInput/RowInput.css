@@ -43,11 +43,6 @@
   opacity: 0.6;
 }
 
-.percent-btn:hover:not(:disabled) {
-  background: #138496;
-  border-color: #138496;
-}
-
 @media (max-width: 768px) {
   .allocation-btn {
     padding: 4px 8px;

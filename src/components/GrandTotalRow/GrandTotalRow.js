@@ -12,9 +12,7 @@ const GrandTotalRow = ({ grandTotal, grandTotalVariance }) => {
       <td className="input-cell"></td>
       <td className="button-cell"></td>
       <td className="button-cell"></td>
-      <td className="variance-cell">
-        <strong>{grandTotalVariance.toFixed(2)}%</strong>
-      </td>
+      <td className="variance-cell"></td>
     </tr>
   );
 };
