@@ -3,33 +3,32 @@
   border-top: 2px solid #dee2e6;
 }
 
-.grand-total-row .label-cell {
+.grand-total-row .label-cell,
+.grand-total-row .value-cell,
+.grand-total-row .input-cell,
+.grand-total-row .button-cell,
+.grand-total-row .variance-cell {
   font-size: 16px;
   padding: 16px;
+  text-align: left;
+}
+
+.grand-total-row .label-cell {
   font-weight: 500;
   color: #495057;
 }
 
 .grand-total-row .value-cell {
-  font-size: 16px;
-  padding: 16px;
   font-weight: 600;
   color: #28a745;
-  text-align: left;
 }
 
 .grand-total-row .input-cell,
 .grand-total-row .button-cell {
-  font-size: 16px;
-  padding: 16px;
-  text-align: left;
   color: #6c757d;
 }
 
 .grand-total-row .variance-cell {
-  font-size: 16px;
-  padding: 16px;
   font-weight: 600;
-  text-align: left;
   color: #6c757d;
 }
