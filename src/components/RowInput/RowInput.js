@@ -5,7 +5,7 @@ import "./RowInput.css";
 const RowInput = ({ rowId, onAllocationPercent, onAllocationValue }) => {
   const [inputValue, setInputValue] = useState("");
 
-  const isValidInput = inputValue && inputValue > 0;
+  const isValidInput = inputValue && inputValue >= 0;
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);

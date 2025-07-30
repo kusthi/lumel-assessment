@@ -67,12 +67,35 @@ const HierarchicalTable = () => {
             if (row.id === targetId) {
               const updatedRow = { ...row };
 
+              //TODO -> refractor duplicate code as resuable fns
               if (isPerc) {
-                const newVal = row.value * (1 + value / 100);
-                updatedRow.value = roundToTwoDecimals(newVal);
+                const calculatedValue = row.value * (1 + value / 100);
+                updatedRow.value = roundToTwoDecimals(calculatedValue);
+
+                // If has children, distribute the new value proportionally
+                if (updatedRow.children && updatedRow.children.length > 0) {
+                  const currentChildrenTotal = updatedRow.children.reduce(
+                    (sum, child) => sum + child.value,
+                    0
+                  );
+
+                  if (currentChildrenTotal > 0) {
+                    updatedRow.children = updatedRow.children.map((child) => ({
+                      ...child,
+                      value: roundToTwoDecimals(
+                        (child.value / currentChildrenTotal) * calculatedValue
+                      ),
+                    }));
+                  } else {
+                    // edge case for zero and negative total though input can't be negative
+                    updatedRow.children = updatedRow.children.map((child) => ({
+                      ...child,
+                      value: value / updatedRow.children.length,
+                    }));
+                  }
+                }
               } else {
                 if (updatedRow.children && updatedRow.children.length > 0) {
-                  // If updating a parent with children, distribute proportionally
                   const currentTotal = updatedRow.children.reduce(
                     (sum, child) => sum + child.value,
                     0
