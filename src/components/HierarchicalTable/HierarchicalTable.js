@@ -67,16 +67,9 @@ const HierarchicalTable = () => {
             if (row.id === targetId) {
               const updatedRow = { ...row };
 
-              console.log(
-                `Found target row: ${targetId}, current value: ${row.value}`
-              );
-
               if (isPerc) {
                 const newVal = row.value * (1 + value / 100);
                 updatedRow.value = roundToTwoDecimals(newVal);
-                console.log(
-                  `Percentage update: ${row.value} * (1 + ${value}/100) = ${newVal} -> ${updatedRow.value}`
-                );
               } else {
                 if (updatedRow.children && updatedRow.children.length > 0) {
                   // If updating a parent with children, distribute proportionally
@@ -120,9 +113,7 @@ const HierarchicalTable = () => {
                 );
                 updatedRow.value = roundToTwoDecimals(newParentValue);
                 rows[i] = updatedRow;
-                console.log(
-                  `Parent ${row.id} recalculated to: ${updatedRow.value}`
-                );
+
                 return true;
               }
             }
