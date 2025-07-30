@@ -1,0 +1,64 @@
+.input-cell {
+  width: 120px;
+}
+
+.value-input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.value-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.button-cell {
+  width: 120px;
+}
+
+.allocation-btn {
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid #007bff;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.allocation-btn:hover:not(:disabled) {
+  background: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.allocation-btn:disabled {
+  background: #6c757d;
+  border-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.percent-btn {
+  background: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.percent-btn:hover:not(:disabled) {
+  background: #138496;
+  border-color: #138496;
+}
+
+@media (max-width: 768px) {
+  .allocation-btn {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
