@@ -9,9 +9,9 @@ const GrandTotalRow = ({ grandTotal, grandTotalVariance }) => {
       <td className="value-cell">
         <strong>{grandTotal.toFixed(2)}</strong>
       </td>
-      <td className="input-cell">-</td>
-      <td className="button-cell">-</td>
-      <td className="button-cell">-</td>
+      <td className="input-cell"></td>
+      <td className="button-cell"></td>
+      <td className="button-cell"></td>
       <td className="variance-cell">
         <strong>{grandTotalVariance.toFixed(2)}%</strong>
       </td>
